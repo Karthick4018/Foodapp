@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>email-verification</title>
+</head>
+<body>
+    <h1>EMAIL-VERIFICATION</h1>
+    <p id="para"></p>
+    <p id="p2"></p>
+    <p id="msg"></p>
+    <script>const urlparams = new URLSearchParams(window.location.search);
+        const status = urlparams.get('status');
+        const message = urlparams.get('message');
+        const paragraph = document.getElementById('para');
+        const msg = document.getElementById('msg');
+        const msg2 = document.getElementById('p2')
+        if(status==='success'){
+            const message2 = urlparams.get('message2');
+            msg.textContent =message;
+            msg2.textContent = message2
+            
+        }else if(status==='error'){
+            message.textContent=message;
+        }else{
+            message.textContent =message;
+        }</script>
+</body>
+</html>
